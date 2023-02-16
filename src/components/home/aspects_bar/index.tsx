@@ -1,4 +1,4 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
 import { AspectItem } from "@/components/home/aspect_item";
 
 export const AspectsBar = () => {

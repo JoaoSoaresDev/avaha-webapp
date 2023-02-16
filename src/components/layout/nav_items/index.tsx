@@ -6,6 +6,7 @@ import {
   ListItemText,
   styled,
   Typography,
+  useTheme,
 } from "@mui/material";
 import "@fontsource/inter";
 
@@ -18,6 +19,8 @@ const NavItemTextStyled = styled(Typography)(({ theme }) => ({
 }));
 
 export const NavItems = () => {
+  const theme = useTheme();
+
   return (
     <Box display={"flex"} gap={5}>
       <List sx={{ display: "flex", alignItems: "center" }}>
@@ -62,6 +65,26 @@ export const NavItems = () => {
             <ListItemText
               primary={
                 <NavItemTextStyled variant={"body1"}>Contact</NavItemTextStyled>
+              }
+            />
+          </ListItemButton>
+        </ListItem>
+        <ListItem sx={{ ml: 2 }}>
+          <ListItemButton
+            sx={{
+              backgroundColor: theme.palette.secondary.main,
+              borderRadius: 25,
+              px: 4,
+            }}
+          >
+            <ListItemText
+              primary={
+                <NavItemTextStyled
+                  variant={"body1"}
+                  sx={{ color: theme.palette.offWhite.main }}
+                >
+                  Book
+                </NavItemTextStyled>
               }
             />
           </ListItemButton>

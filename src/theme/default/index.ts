@@ -6,34 +6,42 @@ let theme = createTheme({
     h1: {
       color: "#1E1E1E",
       fontFamily: "Inter",
+      fontWeight: 600,
     },
     h2: {
       color: "#1E1E1E",
       fontFamily: "Inter",
+      fontWeight: 600,
     },
     h3: {
       color: "#1E1E1E",
       fontFamily: "Inter",
+      fontWeight: 600,
     },
     h4: {
       color: "#1E1E1E",
       fontFamily: "Inter",
+      fontWeight: 600,
     },
     h5: {
       color: "#1E1E1E",
       fontFamily: "Inter",
+      fontWeight: 600,
     },
     h6: {
       color: "#1E1E1E",
       fontFamily: "Inter",
+      fontWeight: 600,
     },
     body1: {
       color: "#1E1E1E",
       fontFamily: "Inter",
+      fontWeight: 600,
     },
     body2: {
       color: "#1E1E1E",
       fontFamily: "Inter",
+      fontWeight: 600,
     },
   },
   palette: {
