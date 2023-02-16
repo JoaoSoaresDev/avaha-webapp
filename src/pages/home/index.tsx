@@ -28,7 +28,7 @@ export const Home = () => {
           <Typography
             variant={"h1"}
             sx={{
-              fontWeight: "500",
+              fontWeight: 600,
               fontSize: 100,
               lineHeight: "110px",
               fontStyle: "normal",
@@ -38,7 +38,7 @@ export const Home = () => {
             <br />
             Counselling Services
           </Typography>
-          <Typography variant={"body1"} fontSize={25}>
+          <Typography variant={"body1"} fontWeight={600} fontSize={25}>
             Specialised counselling services for issues relating to spiritual
             abuse, addiction, grief and mental health.
           </Typography>
