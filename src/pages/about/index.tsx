@@ -1,13 +1,7 @@
-import { Box, useTheme } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import "@fontsource/inter";
-import {
-  AspectsBar,
-  ServiceCycle,
-  ValuesSection,
-  WelcomeSection,
-} from "@/components";
 
-export const Home = () => {
+export const About = () => {
   const theme = useTheme();
 
   return (
@@ -21,13 +15,7 @@ export const Home = () => {
       py={10}
       gap={8}
     >
-      <WelcomeSection />
-
-      <AspectsBar />
-
-      <ServiceCycle />
-
-      <ValuesSection />
+      <Typography variant={"h1"}>Welcome to about</Typography>
     </Box>
   );
 };

@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import "@/index.css";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home } from "@/pages";
+import { About, Book, Contact, FAQ, Home, Layout, Service } from "@/pages";
 import { ThemeProvider } from "@mui/material";
 import theme from "@/theme/default";
 
@@ -14,9 +14,16 @@ const root = ReactDOM.createRoot(
 root.render(
   <ThemeProvider theme={theme}>
     <BrowserRouter>
-      <Routes>
-        <Route path={"/"} element={<Home />} />
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route path={"/"} element={<Home />} />
+          <Route path={"/about"} element={<About />} />
+          <Route path={"/service"} element={<Service />} />
+          <Route path={"/faq"} element={<FAQ />} />
+          <Route path={"/contact"} element={<Contact />} />
+          <Route path={"/book"} element={<Book />} />
+        </Routes>
+      </Layout>
     </BrowserRouter>
   </ThemeProvider>
 );

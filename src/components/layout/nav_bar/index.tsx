@@ -8,7 +8,6 @@ import {
 import React from "react";
 import Logo from "@/assets/img/Avaha Logo.svg";
 import { NavItems } from "@/components/layout/nav_items";
-import * as timers from "timers";
 
 export const NavBar = () => {
   const theme = useTheme();
@@ -30,6 +29,7 @@ export const NavBar = () => {
             backgroundColor: theme.palette.surface.main,
           }}
         >
+          {/*TODO: Change logo from black to purple*/}
           <Box
             component={"img"}
             src={Logo}

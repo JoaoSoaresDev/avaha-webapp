@@ -9,6 +9,7 @@ import {
   useTheme,
 } from "@mui/material";
 import "@fontsource/inter";
+import { useNavigate } from "react-router-dom";
 
 const NavItemTextStyled = styled(Typography)(({ theme }) => ({
   fontFamily: "Inter",
@@ -20,12 +21,13 @@ const NavItemTextStyled = styled(Typography)(({ theme }) => ({
 
 export const NavItems = () => {
   const theme = useTheme();
+  const navigation = useNavigate();
 
   return (
     <Box display={"flex"} gap={5}>
       <List sx={{ display: "flex", alignItems: "center" }}>
         <ListItem>
-          <ListItemButton>
+          <ListItemButton onClick={() => navigation("/")}>
             <ListItemText
               primary={
                 <NavItemTextStyled variant={"body1"}>Home</NavItemTextStyled>
@@ -34,7 +36,7 @@ export const NavItems = () => {
           </ListItemButton>
         </ListItem>
         <ListItem>
-          <ListItemButton>
+          <ListItemButton onClick={() => navigation("/about")}>
             <ListItemText
               primary={
                 <NavItemTextStyled variant={"body1"}>About</NavItemTextStyled>
@@ -43,7 +45,7 @@ export const NavItems = () => {
           </ListItemButton>
         </ListItem>
         <ListItem>
-          <ListItemButton>
+          <ListItemButton onClick={() => navigation("/service")}>
             <ListItemText
               primary={
                 <NavItemTextStyled variant={"body1"}>Service</NavItemTextStyled>
@@ -52,7 +54,7 @@ export const NavItems = () => {
           </ListItemButton>
         </ListItem>
         <ListItem>
-          <ListItemButton>
+          <ListItemButton onClick={() => navigation("/faq")}>
             <ListItemText
               primary={
                 <NavItemTextStyled variant={"body1"}>FAQ</NavItemTextStyled>
@@ -61,7 +63,7 @@ export const NavItems = () => {
           </ListItemButton>
         </ListItem>
         <ListItem>
-          <ListItemButton>
+          <ListItemButton onClick={() => navigation("/contact")}>
             <ListItemText
               primary={
                 <NavItemTextStyled variant={"body1"}>Contact</NavItemTextStyled>
@@ -76,6 +78,7 @@ export const NavItems = () => {
               borderRadius: 25,
               px: 4,
             }}
+            onClick={() => navigation("/book")}
           >
             <ListItemText
               primary={
