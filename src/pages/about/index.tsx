@@ -1,5 +1,6 @@
 import { Box, Typography, useTheme } from "@mui/material";
 import "@fontsource/inter";
+import { AboutPresentation, Specialties, Values } from "@/components/about";
 
 export const About = () => {
   const theme = useTheme();
@@ -13,9 +14,15 @@ export const About = () => {
       width={"100%"}
       textAlign={"center"}
       py={10}
-      gap={8}
+      gap={15}
     >
-      <Typography variant={"h1"}>Welcome to about</Typography>
+      <Typography variant={"h1"}>About</Typography>
+
+      <AboutPresentation />
+
+      <Specialties />
+
+      <Values />
     </Box>
   );
 };

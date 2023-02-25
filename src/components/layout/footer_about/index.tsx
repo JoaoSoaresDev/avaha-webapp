@@ -18,7 +18,7 @@ const NavItemTextStyled = styled(Typography)(({ theme }) => ({
 
 const FooterItemButton = styled(ListItemButton)(({ theme }) => ({
   padding: 1,
-  maxWidth: "fit-content",
+  maxWidth: "fit-presentation",
 }));
 
 const FooterListItem = styled(ListItem)(({ theme }) => ({

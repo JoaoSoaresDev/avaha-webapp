@@ -16,7 +16,9 @@ export const Layout = ({ children }: IProps) => {
       justifyContent={"center"}
     >
       <NavBar />
-      <Box flex={1}>{children}</Box>
+      <Box width={"100%"} flex={1}>
+        {children}
+      </Box>
       <Footer />
     </Box>
   );
