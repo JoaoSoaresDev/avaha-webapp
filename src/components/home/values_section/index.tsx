@@ -18,7 +18,7 @@ export const ValuesSection = () => {
         sx={{ backgroundColor: theme.palette.secondary.main, py: 3 }}
       >
         <Typography variant={"h3"} sx={{ color: theme.palette.offWhite.main }}>
-          Our values
+          About us
         </Typography>
       </Box>
       <Box
@@ -30,8 +30,14 @@ export const ValuesSection = () => {
         gap={5}
       >
         <Typography variant={"body1"}>
-          SEO - keyword rich text about business. Just over 300 words is ideal
-          to optimise your search engine rankings including subheadings.
+          Ahava Counselling Services (ACS) is an online counselling service in
+          Perth, Western Australia that warmly welcomes each individual seeking
+          professional and therapeutic support to live a fulfilled and
+          flourishing life. With our accessible-at-home telehealth service, ACS
+          stands to empower people to reach their potential and overcome
+          challenging times. As every person is different, we work with each
+          client at their own pace to help them discover their capabilities,
+          gain clarity and reconnect with who they are.
         </Typography>
 
         <Divider

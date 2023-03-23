@@ -21,6 +21,7 @@ export const Specialties = () => {
   const [addictionOpen, setAddictionOpen] = useState(false);
   const [griefOpen, setGriefOpen] = useState(false);
 
+  //TODO: Change whatever is inside the specialities
   return (
     <Box
       display={"flex"}
@@ -46,7 +47,7 @@ export const Specialties = () => {
           <ListItemButton
             onClick={() => setSpiritualAbuseOpen(!spiritualAbuseOpen)}
           >
-            <ListItemText primary="Spiritual Abuse" />
+            <ListItemText primary="Cultic, Spiritual & Religious Abuse" />
             <ListItemIcon>
               {spiritualAbuseOpen ? <RemoveIcon /> : <AddIcon />}
             </ListItemIcon>
@@ -82,7 +83,7 @@ export const Specialties = () => {
           <ListItemButton
             onClick={() => setMentalHealthOpen(!mentalHealthOpen)}
           >
-            <ListItemText primary="Mental Health" />
+            <ListItemText primary="Stress, Anxiety & Depression" />
             <ListItemIcon>
               {mentalHealthOpen ? <RemoveIcon /> : <AddIcon />}
             </ListItemIcon>
@@ -148,7 +149,7 @@ export const Specialties = () => {
 
           <Divider />
           <ListItemButton onClick={() => setGriefOpen(!griefOpen)}>
-            <ListItemText primary="Grief" />
+            <ListItemText primary="Grief & Loss" />
             <ListItemIcon>
               {griefOpen ? <RemoveIcon /> : <AddIcon />}
             </ListItemIcon>

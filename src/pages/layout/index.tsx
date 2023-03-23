@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Fade } from "@mui/material";
 import { NavBar } from "@/components";
 import { Footer } from "@/components/layout/footer";
 

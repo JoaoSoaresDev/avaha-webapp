@@ -1,4 +1,4 @@
-import { Box, useTheme } from "@mui/material";
+import { Box, Fade, useTheme } from "@mui/material";
 import "@fontsource/inter";
 import {
   AspectsBar,
@@ -6,28 +6,37 @@ import {
   ValuesSection,
   WelcomeSection,
 } from "@/components";
+import { motion } from "framer-motion";
 
 export const Home = () => {
   const theme = useTheme();
 
   return (
-    <Box
-      display={"flex"}
-      alignItems={"center"}
-      justifyContent={"center"}
-      flexDirection={"column"}
-      width={"100%"}
-      textAlign={"center"}
-      py={10}
-      gap={8}
+    <motion.main
+      className="main__container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1.5 }}
     >
-      <WelcomeSection />
+      <Box
+        display={"flex"}
+        alignItems={"center"}
+        justifyContent={"center"}
+        flexDirection={"column"}
+        width={"100%"}
+        textAlign={"center"}
+        py={10}
+        gap={8}
+      >
+        <WelcomeSection />
 
-      <AspectsBar />
+        <AspectsBar />
 
-      <ServiceCycle />
+        <ServiceCycle />
 
-      <ValuesSection />
-    </Box>
+        <ValuesSection />
+      </Box>
+    </motion.main>
   );
 };

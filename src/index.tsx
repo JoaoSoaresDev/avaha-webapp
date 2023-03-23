@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { About, Book, Contact, FAQ, Home, Layout, Service } from "@/pages";
 import { ThemeProvider } from "@mui/material";
 import theme from "@/theme/default";
+import { AnimatePresence } from "framer-motion";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -13,18 +14,20 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <ThemeProvider theme={theme}>
-    <BrowserRouter>
-      <Layout>
-        <Routes>
-          <Route path={"/"} element={<Home />} />
-          <Route path={"/about"} element={<About />} />
-          <Route path={"/service"} element={<Service />} />
-          <Route path={"/faq"} element={<FAQ />} />
-          <Route path={"/contact"} element={<Contact />} />
-          <Route path={"/book"} element={<Book />} />
-        </Routes>
-      </Layout>
-    </BrowserRouter>
+    <AnimatePresence>
+      <BrowserRouter>
+        <Layout>
+          <Routes>
+            <Route path={"/"} element={<Home />} />
+            <Route path={"/about"} element={<About />} />
+            <Route path={"/service"} element={<Service />} />
+            <Route path={"/faq"} element={<FAQ />} />
+            <Route path={"/contact"} element={<Contact />} />
+            <Route path={"/book"} element={<Book />} />
+          </Routes>
+        </Layout>
+      </BrowserRouter>
+    </AnimatePresence>
   </ThemeProvider>
 );
 

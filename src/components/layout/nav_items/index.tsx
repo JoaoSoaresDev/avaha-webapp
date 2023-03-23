@@ -11,6 +11,16 @@ import {
 import "@fontsource/inter";
 import { useNavigate } from "react-router-dom";
 
+const NavItemButtonStyled = styled(ListItemButton)(({ theme }) => ({
+  transition: theme.transitions.create(["transform"], {
+    duration: theme.transitions.duration.standard,
+  }),
+  "&:hover": {
+    backgroundColor: "transparent",
+    transform: "scale(1.1)",
+  },
+}));
+
 const NavItemTextStyled = styled(Typography)(({ theme }) => ({
   fontFamily: "Inter",
   fontStyle: "normal",
@@ -27,49 +37,49 @@ export const NavItems = () => {
     <Box display={"flex"} gap={5}>
       <List sx={{ display: "flex", alignItems: "center" }}>
         <ListItem>
-          <ListItemButton onClick={() => navigation("/")}>
+          <NavItemButtonStyled onClick={() => navigation("/")}>
             <ListItemText
               primary={
                 <NavItemTextStyled variant={"body1"}>Home</NavItemTextStyled>
               }
             />
-          </ListItemButton>
+          </NavItemButtonStyled>
         </ListItem>
         <ListItem>
-          <ListItemButton onClick={() => navigation("/about")}>
+          <NavItemButtonStyled onClick={() => navigation("/about")}>
             <ListItemText
               primary={
                 <NavItemTextStyled variant={"body1"}>About</NavItemTextStyled>
               }
             />
-          </ListItemButton>
+          </NavItemButtonStyled>
         </ListItem>
         <ListItem>
-          <ListItemButton onClick={() => navigation("/service")}>
+          <NavItemButtonStyled onClick={() => navigation("/service")}>
             <ListItemText
               primary={
                 <NavItemTextStyled variant={"body1"}>Service</NavItemTextStyled>
               }
             />
-          </ListItemButton>
+          </NavItemButtonStyled>
         </ListItem>
         <ListItem>
-          <ListItemButton onClick={() => navigation("/faq")}>
+          <NavItemButtonStyled onClick={() => navigation("/faq")}>
             <ListItemText
               primary={
                 <NavItemTextStyled variant={"body1"}>FAQ</NavItemTextStyled>
               }
             />
-          </ListItemButton>
+          </NavItemButtonStyled>
         </ListItem>
         <ListItem>
-          <ListItemButton onClick={() => navigation("/contact")}>
+          <NavItemButtonStyled onClick={() => navigation("/contact")}>
             <ListItemText
               primary={
                 <NavItemTextStyled variant={"body1"}>Contact</NavItemTextStyled>
               }
             />
-          </ListItemButton>
+          </NavItemButtonStyled>
         </ListItem>
         <ListItem sx={{ ml: 2 }}>
           <ListItemButton
