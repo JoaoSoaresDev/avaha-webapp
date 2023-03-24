@@ -1,6 +1,12 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, Divider, Typography, useTheme } from "@mui/material";
 import "@fontsource/inter";
-import { HowItWorks, ServicesPresentation } from "@/components";
+import {
+  Booking,
+  HowItWorks,
+  JustAsk,
+  RelaxWait,
+  ServicesPresentation,
+} from "@/components";
 import { motion } from "framer-motion";
 
 export const Service = () => {
@@ -31,6 +37,24 @@ export const Service = () => {
         <ServicesPresentation />
 
         <HowItWorks />
+
+        <Booking />
+
+        <Divider
+          orientation={"vertical"}
+          color={"black"}
+          sx={{ height: 150 }}
+        />
+
+        <RelaxWait />
+
+        <Divider
+          orientation={"vertical"}
+          color={"black"}
+          sx={{ height: 150 }}
+        />
+
+        <JustAsk />
       </Box>
     </motion.main>
   );
