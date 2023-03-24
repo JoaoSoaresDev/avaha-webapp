@@ -1,7 +1,8 @@
-import { Box, Fade, useTheme } from "@mui/material";
+import { Box, Divider, Fade, useTheme } from "@mui/material";
 import "@fontsource/inter";
 import {
   AspectsBar,
+  JustAsk,
   ServiceCycle,
   ValuesSection,
   WelcomeSection,
@@ -36,6 +37,17 @@ export const Home = () => {
         <ServiceCycle />
 
         <ValuesSection />
+
+        <Divider
+          orientation={"vertical"}
+          sx={{
+            height: 100,
+            borderRightWidth: 2,
+            borderRightColor: theme.palette.offBlack.main,
+          }}
+        />
+
+        <JustAsk />
       </Box>
     </motion.main>
   );
