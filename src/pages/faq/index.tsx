@@ -3,10 +3,12 @@ import "@fontsource/inter";
 import {
   AboutPresentation,
   AssociatedBodies,
+  JustAsk,
   Specialties,
   Values,
 } from "@/components";
 import { motion } from "framer-motion";
+import { PricingChart, QuestionsList } from "@/components/faq";
 
 export const FAQ = () => {
   const theme = useTheme();
@@ -27,7 +29,7 @@ export const FAQ = () => {
         width={"100%"}
         textAlign={"center"}
         py={10}
-        gap={18}
+        gap={10}
       >
         <Box
           display={"flex"}
@@ -44,6 +46,12 @@ export const FAQ = () => {
             think may help you.
           </Typography>
         </Box>
+
+        <QuestionsList />
+
+        <PricingChart />
+
+        <JustAsk />
       </Box>
     </motion.main>
   );
