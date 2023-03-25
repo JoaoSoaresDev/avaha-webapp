@@ -33,7 +33,9 @@ export const DropdownItem = ({
       </ListItemButton>
 
       <Collapse in={isOpen} timeout="auto" unmountOnExit>
-        {collapsableContent}
+        <Box width={"80%"} textAlign={"start"} pl={2} py={5}>
+          {collapsableContent}
+        </Box>
       </Collapse>
 
       <Divider />
