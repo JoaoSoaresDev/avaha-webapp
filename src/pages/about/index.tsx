@@ -5,7 +5,7 @@ import {
   AssociatedBodies,
   Specialties,
   Values,
-} from "@/components/about";
+} from "@/components";
 import { motion } from "framer-motion";
 
 export const About = () => {
