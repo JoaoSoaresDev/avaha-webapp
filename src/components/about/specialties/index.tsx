@@ -1,18 +1,6 @@
-import {
-  Box,
-  Collapse,
-  Divider,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  Typography,
-  useTheme,
-} from "@mui/material";
-import AddIcon from "@mui/icons-material/Add";
-import RemoveIcon from "@mui/icons-material/Remove";
+import { Box, List, ListItem, Typography, useTheme } from "@mui/material";
 import { useState } from "react";
+import { DropdownItem } from "@/components";
 
 export const Specialties = () => {
   const theme = useTheme();
@@ -44,143 +32,125 @@ export const Specialties = () => {
 
       <Box width={"40%"}>
         <List sx={{ width: "100%" }}>
-          <ListItemButton
-            onClick={() => setSpiritualAbuseOpen(!spiritualAbuseOpen)}
-          >
-            <ListItemText primary="Cultic, Spiritual & Religious Abuse" />
-            <ListItemIcon>
-              {spiritualAbuseOpen ? <RemoveIcon /> : <AddIcon />}
-            </ListItemIcon>
-          </ListItemButton>
+          <DropdownItem
+            title={"Cultic, Spiritual & Religious Abuse"}
+            isOpen={spiritualAbuseOpen}
+            setOpen={setSpiritualAbuseOpen}
+            collapsableContent={
+              <List
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  pl: 7,
+                  listStyleType: "disc",
+                  "& .MuiListItem-root": {
+                    display: "list-item",
+                  },
+                }}
+              >
+                <ListItem>
+                  <Typography variant={"body2"}>Something</Typography>
+                </ListItem>
+                <ListItem>
+                  <Typography variant={"body2"}>Something</Typography>
+                </ListItem>
+                <ListItem>
+                  <Typography variant={"body2"}>Something</Typography>
+                </ListItem>
+              </List>
+            }
+          />
 
-          <Collapse in={spiritualAbuseOpen} timeout="auto" unmountOnExit>
-            <List
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                pl: 7,
-                listStyleType: "disc",
-                "& .MuiListItem-root": {
-                  display: "list-item",
-                },
-              }}
-            >
-              <ListItem>
-                <Typography variant={"body2"}>Something</Typography>
-              </ListItem>
-              <ListItem>
-                <Typography variant={"body2"}>Something</Typography>
-              </ListItem>
-              <ListItem>
-                <Typography variant={"body2"}>Something</Typography>
-              </ListItem>
-            </List>
-          </Collapse>
+          <DropdownItem
+            title={"Stress, Anxiety & Depression"}
+            isOpen={mentalHealthOpen}
+            setOpen={setMentalHealthOpen}
+            collapsableContent={
+              <List
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  pl: 7,
+                  listStyleType: "disc",
+                  "& .MuiListItem-root": {
+                    display: "list-item",
+                  },
+                }}
+              >
+                <ListItem>
+                  <Typography variant={"body2"}>Something</Typography>
+                </ListItem>
+                <ListItem>
+                  <Typography variant={"body2"}>Something</Typography>
+                </ListItem>
+                <ListItem>
+                  <Typography variant={"body2"}>Something</Typography>
+                </ListItem>
+              </List>
+            }
+          />
 
-          <Divider />
+          <DropdownItem
+            title={"Addiction"}
+            isOpen={addictionOpen}
+            setOpen={setAddictionOpen}
+            collapsableContent={
+              <List
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  pl: 7,
+                  listStyleType: "disc",
+                  "& .MuiListItem-root": {
+                    display: "list-item",
+                  },
+                }}
+              >
+                <ListItem>
+                  <Typography variant={"body2"}>Something</Typography>
+                </ListItem>
+                <ListItem>
+                  <Typography variant={"body2"}>Something</Typography>
+                </ListItem>
+                <ListItem>
+                  <Typography variant={"body2"}>Something</Typography>
+                </ListItem>
+              </List>
+            }
+          />
 
-          <ListItemButton
-            onClick={() => setMentalHealthOpen(!mentalHealthOpen)}
-          >
-            <ListItemText primary="Stress, Anxiety & Depression" />
-            <ListItemIcon>
-              {mentalHealthOpen ? <RemoveIcon /> : <AddIcon />}
-            </ListItemIcon>
-          </ListItemButton>
-
-          <Collapse in={mentalHealthOpen} timeout="auto" unmountOnExit>
-            <List
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                pl: 7,
-                listStyleType: "disc",
-                "& .MuiListItem-root": {
-                  display: "list-item",
-                },
-              }}
-            >
-              <ListItem>
-                <Typography variant={"body2"}>Something</Typography>
-              </ListItem>
-              <ListItem>
-                <Typography variant={"body2"}>Something</Typography>
-              </ListItem>
-              <ListItem>
-                <Typography variant={"body2"}>Something</Typography>
-              </ListItem>
-            </List>
-          </Collapse>
-
-          <Divider />
-          <ListItemButton onClick={() => setAddictionOpen(!addictionOpen)}>
-            <ListItemText primary="Addiction" />
-            <ListItemIcon>
-              {addictionOpen ? <RemoveIcon /> : <AddIcon />}
-            </ListItemIcon>
-          </ListItemButton>
-
-          <Collapse in={addictionOpen} timeout="auto" unmountOnExit>
-            <List
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                pl: 7,
-                listStyleType: "disc",
-                "& .MuiListItem-root": {
-                  display: "list-item",
-                },
-              }}
-            >
-              <ListItem>
-                <Typography variant={"body2"}>Something</Typography>
-              </ListItem>
-              <ListItem>
-                <Typography variant={"body2"}>Something</Typography>
-              </ListItem>
-              <ListItem>
-                <Typography variant={"body2"}>Something</Typography>
-              </ListItem>
-            </List>
-          </Collapse>
-
-          <Divider />
-          <ListItemButton onClick={() => setGriefOpen(!griefOpen)}>
-            <ListItemText primary="Grief & Loss" />
-            <ListItemIcon>
-              {griefOpen ? <RemoveIcon /> : <AddIcon />}
-            </ListItemIcon>
-          </ListItemButton>
-
-          <Collapse in={griefOpen} timeout="auto" unmountOnExit>
-            <List
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                pl: 7,
-                listStyleType: "disc",
-                "& .MuiListItem-root": {
-                  display: "list-item",
-                },
-              }}
-            >
-              <ListItem>
-                <Typography variant={"body2"}>Something</Typography>
-              </ListItem>
-              <ListItem>
-                <Typography variant={"body2"}>Something</Typography>
-              </ListItem>
-              <ListItem>
-                <Typography variant={"body2"}>Something</Typography>
-              </ListItem>
-            </List>
-          </Collapse>
-
-          <Divider />
+          <DropdownItem
+            title={"Grief & Loss"}
+            isOpen={griefOpen}
+            setOpen={setGriefOpen}
+            collapsableContent={
+              <List
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  pl: 7,
+                  listStyleType: "disc",
+                  "& .MuiListItem-root": {
+                    display: "list-item",
+                  },
+                }}
+              >
+                <ListItem>
+                  <Typography variant={"body2"}>Something</Typography>
+                </ListItem>
+                <ListItem>
+                  <Typography variant={"body2"}>Something</Typography>
+                </ListItem>
+                <ListItem>
+                  <Typography variant={"body2"}>Something</Typography>
+                </ListItem>
+              </List>
+            }
+          />
         </List>
       </Box>
     </Box>
